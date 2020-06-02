@@ -2,11 +2,11 @@
 <html lang="ru">
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" type="text/css" href="css/Rest.css">
+	<link rel="stylesheet" type="text/css" href="css/css.css">
 	<link rel="stylesheet" type="text/css" href="css/normalize.css">
 	<link rel="stylesheet" type="text/css" href="css/animate.css">
 	<meta charset="UTF-8">
-	<title>PizzaPlus - доставка еды на дом</title>
+	<title>Delivery Food - доставка еды на дом</title>
 	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -21,23 +21,25 @@
 					
 				</ul>
 			</div>
+			
 			<div class="buttons">
 				<button class="button button-primary" id="card-login">
 					<img src="img/user.svg" alt="User" class="button-icon">
 					Войти
-				</button>
-				<button class="button button-basket" id="card-basket">
-					<img src="img/shopping-cart.svg" alt="Shopping-cart" class="button-icon">
-					Корзина
 				</button>
 			</div>
 		</header>
 	</div>
 	<div class="main"> 
 		<div class="container"> 
+			<section class="promo">
+				<h1 class="promo-title">Онлайн-сервиc<br />
+				доставки еды на дом</h1>
+				<P calss="promo-text">Блюда из любимого ресторана привезет<br/> курьер в перчатках, маске и с антисептиком</P>
+			</section>
 			<section class="restaurants">
 				<div class="restaurant-heading">
-					
+					<h2 class="restaurant-title" >Рестораны</h2>
 				</div>
 				<div class="cards-section">
 					
@@ -47,8 +49,8 @@
 	</div>		
 	<footer class="footer">
 		<div class="container"> 
-			<div class="footer-block">
-			 	<a href="html.html" class="logo-footer">
+			<div class="footer-block"> 
+				<a href="html.html" class="logo-footer">
 					<img src="img/logo.svg" alt="Logo" >
 				</a>
 				<nav class="footer-nav">
@@ -63,26 +65,7 @@
 				</div>
 			</div>	
 		</div> 
-	</footer>	
-<div class="modal-basket">
-		<div class="modal-window">
-			<div class="modal-header">
-				<h3 class="modal-title">Корзина</h3>
-				<button class="modal-close-basket">&times;</button>
-			</div>
-			<div class="modal-basket-body">	
-			</div>
-			<div class="modal-footer">
-				<div class="modal-footer-price">
-						
-				</div>
-				<div class="footer-buttons">
-					<button class="button button-primary button-primary-submit">Оформить заказ</button>
-					<button class="button button-cancel">Отмена</button>
-				</div>
-			</div>
-		</div>
-	</div>
+	</footer>
 	<div class="modal-login"> 
 		<div class="modal-window">
 			<div class="modal-header">
@@ -92,8 +75,8 @@
 			<div class="modal-login-body">
 			<form class="form-number-phone">
 				<label class="label">
-					<input type="tel" inputmode="text" class="input-def-number" value='+7'>
-					 <span class="label-title-def"> Телефон для Входа</span> 
+					<input type="tel" inputmode="text" class="input-def" value='+7'>
+					 <span class="label-title-def"> Телефон для связи</span> 
 				</label>
 				<p class="user-agreement">Указывая номер телефона, вы принимаете условия <span class="user-agreement-green">пользовательского соглашения</span></p>
 				<button type="submit" class="login-button" id="card-join"> 
@@ -103,20 +86,45 @@
 			</div>
 		</div>
 	</div>
-	<div class="modal-confirm-order">
-		<div class="modal-window-confirm-order">
-			<div class="modal-header">
-				<h3 class="modal-title">Ваш заказ подтвержден</h3>
-				<button class="modal-close-confirm-order">&times;</button>
-			</div> 
-			<div class="modal-window-confirm-body">
-				<p>Мы свяжимся с вами по телефону для уточнения адреса</p>
+	<div class='support'>
+		<img class="support-image" src="/img/button.png" alt="Support">
+	</div>
+	<div class="modal-support" draggable="true" id="mdsupp">
+			<div class="operator-block" draggable="true" id="operblock">
+				<h4 class="operator-block-title">Оператор</h4>
+				<button class="modal-close-support">×</button>
+			</div>
+			<div class="operator-desription">
+				<div class="operator-desription-text">
+					<p>Для начала диалога введите,
+						пожалуйста, свою контактную 
+						информацию и вопрос.
+					</p>
+				</div>
+				<div class="block-form">
+					<form class="operato-form">
+						<label class=label >
+							<input class="input-def operator-input" type="text">
+							<span class="label-title-def">Ваше имя</span>
+						</label>
+						<label class=label >
+							<input class="input-def operator-input operator-input-massage" type="text">
+							<span class="label-title-def">Сообщение</span>
+						</label>
+						<label class="label-def partners-form-checkbox">
+							<input type="checkbox" value="1" checked="checked" class="checkbox-def"> 
+							<span class="label-text-def-delivery">Согласие на обработку данных</span> 
+						</label>
+						<div class="button-dialog"> 
+							<button type="submit" class="button button-begin-dialog">
+								Начать диалог
+							</button>
+						</div>
+					</form>
+				</div>
 			</div>
 		</div>
-	</div>
-
-	</div>
 	<script src="Script/wow.min.js"></script>
-	<script src="Script/rest4.js"></script>
+	<script src="Script/main.js"></script>
 </body>
 </html>
